@@ -33,9 +33,9 @@ export class ShopComponent implements OnInit {
   };
 
   // TODO: #11. Announce changes with LiveAnnouncer
-  constructor() { }
+  constructor() {}
 
-  ngOnInit(): void { }
+  ngOnInit(): void {}
 
   counter(i: number): Array<number> {
     return new Array(i);

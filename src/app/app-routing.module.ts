@@ -21,10 +21,10 @@ import { ShopComponent } from './shop/shop.component';
 
 // TODO: #4. Define unique page titles
 const routes: Routes = [
-  { path: 'shop', component: ShopComponent },
-  { path: 'about', component: AboutComponent },
-  { path: 'locate', component: LocationComponent },
-  { path: '',   redirectTo: '/shop', pathMatch: 'full' },
+  { path: 'shop', component: ShopComponent, data: { title: 'Our Shop - a11y in Angular' } },
+  { path: 'about', component: AboutComponent, data: { title: 'Our Story - a11y in Angular' } },
+  { path: 'locate', component: LocationComponent, data: { title: 'Find us - a11y in Angular' } },
+  { path: '', redirectTo: '/shop', pathMatch: 'full' },
   { path: '**', component: ShopComponent },
 ];
 
@@ -32,4 +32,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

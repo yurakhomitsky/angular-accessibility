@@ -37,6 +37,7 @@ import { DumplingComponent } from './shop/dumpling/dumpling.component';
 import { LocationComponent } from './location/location.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { ShopComponent } from './shop/shop.component';
+import { A11yModule } from '@angular/cdk/a11y';
 
 // TODO: #9. Add the power of @angular/cdk/a11y
 
@@ -64,8 +65,9 @@ import { ShopComponent } from './shop/shop.component';
     MatSliderModule,
     MatToolbarModule,
     GoogleMapsModule,
+    A11yModule
   ],
   providers: [Title],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

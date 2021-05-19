@@ -15,20 +15,28 @@ limitations under the License.
 -->
 <div mat-dialog-content>
   <!-- TODO: #10. Control focus with FocusTrap -->
-  <mat-selection-list #colors aria-label="Dumpling wrapper color" multiple="false">
-    <mat-list-option *ngFor="let paint of defaultColors" [value]="paint" color="primary">
+  <mat-selection-list #colors
+    aria-label="Dumpling wrapper color"
+    multiple="false"
+    cdkFocusInitial>
+    <mat-list-option *ngFor="let paint of defaultColors"
+      [value]="paint"
+      color="primary">
       <div class="color-option">
-        <div class="circle" [ngStyle]="{'background': paint}"></div>
+        <div class="circle"
+          [ngStyle]="{'background': paint}"></div>
         <p>{{ paint }}</p>
       </div>
     </mat-list-option>
   </mat-selection-list>
 </div>
 <div mat-dialog-actions>
-  <button mat-button (click)="closeDialog()">
+  <button mat-button
+    (click)="closeDialog()">
     Cancel
   </button>
-  <button mat-button (click)="changeColor(colors.selectedOptions.selected[0]?.value)">
+  <button mat-button
+    (click)="changeColor(colors.selectedOptions.selected[0]?.value)">
     Apply color
   </button>
 </div>

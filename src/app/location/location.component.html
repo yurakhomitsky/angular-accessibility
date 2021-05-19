@@ -14,13 +14,12 @@ See the License for the specific language governing permissions and
 limitations under the License.
 -->
 <div class="location-map">
-  <google-map
-    role="application"
+  <google-map role="application"
     height="50%"
     width="100%"
     [options]="options">
     <map-marker [position]="markerPosition"
-                [options]="markerOptions"></map-marker>
+      [options]="markerOptions"></map-marker>
   </google-map>
   <div class="details">
     <h2>Find Us</h2>
@@ -29,7 +28,7 @@ limitations under the License.
       <div>San Francisco, CA 94114</div>
     </address>
     <div class="hours">
-      <h3>Pickup Hours</h3>
+      <p class="mat-subheading-2">Pickup Hours</p>
       <p>Monday to Friday, 10am to 6pm</p>
     </div>
   </div>

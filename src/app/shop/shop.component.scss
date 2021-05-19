@@ -60,17 +60,6 @@
 
     .fillings {
       flex-grow: 1;
-
-      // TODO: #7. Create selectable controls with Angular Material
-      ul { 
-        list-style: none;
-        margin: 5px 20px;
-        padding: 0;
-      }
-      
-      li {
-        margin: 10px 0;
-      }
     }
 
     .quantity {
@@ -107,7 +96,10 @@
   }
 
   .purchase-button {
-    background-color: mat.get-color-from-palette(mat.$light-green-palette, A100);
+    background-color: mat.get-color-from-palette(
+      mat.$light-green-palette,
+      A100
+    );
 
     // TODO: #12. Enable HighContrast mode
   }

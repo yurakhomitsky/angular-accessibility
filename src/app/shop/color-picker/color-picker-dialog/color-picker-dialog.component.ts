@@ -13,6 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+import { LiveAnnouncer } from '@angular/cdk/a11y';
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { MatDialogRef } from '@angular/material/dialog';
 
@@ -43,18 +44,17 @@ export class ColorPickerDialogComponent implements OnInit {
     'plum',
   ];
 
-  // TODO: #11. Announce changes with LiveAnnouncer
-  constructor(public dialogRef: MatDialogRef<ColorPickerDialogComponent>) { }
+  constructor(public dialogRef: MatDialogRef<ColorPickerDialogComponent>, private liveAnnouncer: LiveAnnouncer) {}
 
-  ngOnInit(): void { }
+  ngOnInit(): void {}
 
   public changeColor(color: string): void {
     if (color) {
       this.recolor.emit(color);
     }
 
-    // TODO: #11. Announce changes with LiveAnnouncer
-    this.dialogRef.close();
+    this.liveAnnouncer.announce(`Select color: ${color}`);
+    this.closeDialog();
   }
 
   public closeDialog(): void {
